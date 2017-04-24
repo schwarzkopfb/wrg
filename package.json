@@ -4,7 +4,8 @@
   "description": "Generate random array indinces by given weight scores.",
   "main": "index.js",
   "scripts": {
-    "test": "tap test.js"
+    "test": "tap test.js",
+    "cover": "npm test -- --cov --coverage-report=lcov"
   },
   "repository": {
     "type": "git",
