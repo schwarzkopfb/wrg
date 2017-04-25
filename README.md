@@ -14,7 +14,6 @@ Generate random array indices weighted by given scores. Optimized for use-cases 
 The package exposes a factory function which takes an array of weight scores and returns the random generator function.
 
 ```js
-
 const wrg = require('wrg'),
       random = wrg([ 2, 5, 3 ]),
       results = [ 0, 0, 0 ]
@@ -23,15 +22,12 @@ for (let i = 0; i < 1000; i++)
     results[ random() ]++
     
 console.log(results)
-
 ```
 
 The result will be similar to the following:
 
 ```
-
 [ 197, 488, 315 ]
-
 ```
 
 ## Installation
