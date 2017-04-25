@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "tap test.js",
-    "cover": "npm test -- --cov --coverage-report=lcov"
+    "cover": "npm test -- --cov --coverage-report=lcov",
+    "benchmark": "node benchmark"
   },
   "repository": {
     "type": "git",
@@ -28,6 +29,7 @@
   },
   "homepage": "https://github.com/schwarzkopfb/wrg#readme",
   "devDependencies": {
+    "bench": "^0.3.6",
     "tap": "^10.3.2",
     "weighted-random": "^0.1.0"
   }
