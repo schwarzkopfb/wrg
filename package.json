@@ -1,7 +1,7 @@
 {
   "name": "wrg",
   "version": "1.0.0",
-  "description": "Generate random array indinces by given weight scores.",
+  "description": "Generate random array indices weighted by given scores.",
   "main": "index.js",
   "scripts": {
     "test": "tap test.js",
