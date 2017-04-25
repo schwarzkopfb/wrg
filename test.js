@@ -4,14 +4,12 @@ var test = require('tap'),
     init = require('./')
 
 function randomWeights(length) {
-    var weights = new Array(length);
-    var i;
+    var weights = new Array(length)
 
-    for (i = 0; i < length; i++) {
-        weights[i] = Math.random() / Math.random(); // Occasionally > 1
-    }
+    for (var i = 0; i < length; i++)
+        weights[i] = Math.random() / Math.random() // Occasionally > 1
 
-    return weights;
+    return weights
 }
 
 test.equal(init([])(), -1, 'given an empty list, it should return -1')

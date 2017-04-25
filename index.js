@@ -8,25 +8,26 @@
 module.exports = createRandomGeneratorFunction
 
 var assert  = require('assert'),
-    message = 'weights must be an array of positive numbers'
+    message = 'weights must be an array of non-negative numbers'
 
 function createRandomGeneratorFunction(weights) {
     assert(Array.isArray(weights), message)
 
-    var totalWeight = 0
+    var totalWeight = 0,
+        length = weights.length,
+        i = length
 
-    for (var i = weights.length; i--;) {
-        var current = weights[i]
-
+    while (i--) {
+        var current = weights[ i ]
         assert(current >= 0, message)
-
         totalWeight += current
     }
 
-    return function () {
-        var n = Math.random() * totalWeight
+    return function random() {
+        var i = length,
+            n = Math.random() * totalWeight
 
-        for (var i = 0; i < weights.length; i++) {
+        while (i--) {
             var current = weights[ i ]
 
             if (n < current)
